@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: black;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.10rem;
+    font-size: 1.5rem;
+}
+
+.mars {
+    width: 200vw;
+    height: 200vw;
+    border-radius: 100vw;
+    background: linear-gradient(to top, black, #c1440e);
+    position: relative;
+    left: -50vw;
+}
+
+.traveller {
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 12.5vmin;
+    background: linear-gradient(white, black);
+    position: absolute;
+    top: calc(25vmin * -0.7);
+    left: calc(50vw - 12.5vmin);
+    z-index: 999;
+}
+
+.container {
+    padding: 2rem;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    margin-bottom: 2.5rem;
+}
+
+.planet-container {
+    /* border-top: 1px solid white; */
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    bottom: 0;
+    max-width: 100vw;
+    max-height: 20vh;
+    
+}
+
+.container p:first-child {
+    font-size: 1.15rem;
+    position: relative;
+    top: 20px;
+    animation: 600s ease-out 0s 1 fade;
+    opacity: 0;
+}   
+
+.container h1 {
+    font-size: 6rem;
+    animation: 600s ease-out 2s 1 fade;
+    opacity: 0;
+}
+
+.container p:last-child {
+    position: relative;
+    font-size: 2.75rem;
+    top: -20px;
+    animation: 600s ease-out 4s 1 fade;
+    opacity: 0;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    0.33%, 100% {
+        opacity: 1;
+    }
+}
+
+.pyramid {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 25vh solid #1f1f1f;
+    border-left: 12vh solid transparent;
+    border-right: 12vh solid transparent;
+}
+
+@media screen and (min-width: 1080px) {
+    .container {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    .container {
+        transform: scale(2);
+    }
+}
